@@ -77,8 +77,7 @@ Deaths = []
 Recoveries = []
 trs = table.select("tbody tr")[2:230]
 for tr in trs:
-    Country.append(tr.find_all("th", attrs = {'scope' : 'row'})[1].find('a').text) 
-    
+    Country.append(tr.find_all("th", attrs = {'scope' : 'row'})[1].find('a').text)   
     tds = tr.find_all("td")
     Cases.append(tds[0].text.replace("\n", "").strip())
     Deaths.append(tds[1].text.replace("\n", "").strip())
